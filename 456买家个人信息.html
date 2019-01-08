@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="bootstrap基础/css/bootstrap.css">
+    <link rel="stylesheet" href="css/456-买家个人信息.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap基础/js/bootstrap.js"></script>
+    <script src="js/456-买家个人信息.js"></script>
+</head>
+<body>
+<div id="header">
+    <div id="header_center">
+        <div id="search">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入查找的古玩名称...">
+                        <span class="input-group-btn">
+                                    <button class="btn" type="button">搜索</button>
+                             </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div id="hot">
+                <span>当前热门搜索：</span>
+                <a href="">字画</a>
+                <a href="">折扇</a>
+                <a href="">玉佩</a>
+                <a href="">陶瓷</a>
+                <a href="">怀表</a>
+                <a href="">古钱</a>
+                <a href="">宝石</a>
+                <a href="">兵器</a>
+                <a href="">甲骨</a>
+                <a href="">古石</a>
+                <a href="">印章</a>
+                <a href="">步摇</a>
+                <a href="">邮票</a>
+                <a href="">古砚</a>
+                <a href="">折伞</a>
+                <a href="">古碗</a>
+                <a href="">扳指</a>
+                <a href="">发簪</a>
+                <a href="">手镯</a>
+                <a href="">银器</a>
+                <a href="">乐器</a>
+            </div>
+        </div>
+    </div>
+    <div id="header_bottom">
+        <ul class="nav ">
+            <li role="presentation" class="active left"><a href="450-聚奇古玩定制首页.html">首页</a></li>
+            <li role="presentation" class="left"><a href="453-商品拍卖1.html">淘立拍</a></li>
+            <li role="presentation" class="left"><a href="457-商品展示.html">热销商品</a></li>
+            <li role="presentation" class="right"><a href="#">故事集锦</a></li>
+            <li role="presentation" class="right"><a href="#">玩物励志</a></li>
+            <li role="presentation" class="right"><a href="#">专属定制</a></li>
+        </ul>
+    </div>
+</div>
+<div class="fenkai"></div>
+<div id="reg_body">
+    <p>用户信息</p>
+    <div id="reg_body_left">
+        <ul class="nav nav-pills nav-stacked">
+            <li id="mess" role="presentation"><a href="#">基本信息</a></li>
+            <li id="pass" role="presentation"><a href="#">密码修改</a></li>
+        </ul>
+    </div>
+    <div id="reg_body_right">
+        <div id="change_mess">
+            <table class="table table-hover">
+                <tr >
+                    <td >用户名：</td>
+                    <td><input type="text" value="12345" disabled></td>
+                    <td>不可修改<span class="glyphicon glyphicon-user"></span></td>
+                </tr>
+                <tr>
+                    <td>邮箱：</td>
+                    <td><input type="text" value="12345@139.com"  disabled="disabled"> </td>
+                    <td class="change">修改 <span class="glyphicon glyphicon-pencil"></span>  </td>
+                </tr>
+                <tr>
+                    <td>电话号码：</td>
+                    <td><input type="text" value="13132345909"  disabled="disabled"></td>
+                    <td class="change">修改 <span class="glyphicon glyphicon-pencil"></span>  </td>
+                </tr>
+            </table>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">保存并提交</button>
+                </div>
+            </div>
+        </div>
+        <div id="change_pass">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">旧密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="inputEmail3" placeholder="请输入原来的密码...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">设置新密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="请输入设置的新密码" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">确认新密码</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="请再次输入新密码" placeholder="Password">
+                    </div>
+                </div>
+            </form>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">保存并提交</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="footer"></div>
+
+</body>
+</html>

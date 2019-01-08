@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    width: 100%;
+    height: 268px;
+    /*background-color: red;*/
+    background: url("Pictures/img/background/bg_header.png") no-repeat center;
+}
+#header #header_top{
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    /*background-color: khaki;*/
+}
+#header #header_top #header_top_left{
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    /*background-color: lightgreen;*/
+}
+#header_top_left marquee{
+color:#956400;
+font-weight:bold;
+line-height:30px;
+}
+#header #header_top #header_top_right{
+width:30%;
+height: 30px;
+line-height: 30px;
+float: right;
+/*background-color: lightgreen;*/
+}
+#header_top_right a{
+text-decoration: none;
+font-weight: bold;
+margin-left: 15px;
+color:#956400 ;
+}
+#header #header_center{
+    width: 80%;
+    height: 118px;
+    /*background-color: dodgerblue;*/
+    margin: 0px auto;
+}
+#header_center #search{
+width: 40%;
+height: 90px;
+/*background-color: deeppink;*/
+float: right;
+    margin-top: 28px;
+/*padding-top: 20px;*/
+/*padding-right: 40px;*/
+/*padding-left: 40px;*/
+}
+
+#header_center #search .btn{
+    background-color: #956400;
+}
+#header_center #search #hot a{
+    text-decoration: none;
+    color:#956400 ;
+}
+#header_center #search #hot span{
+    font-weight: bold;
+    color:red ;
+}
+#header #header_bottom{
+    width: 80%;
+    height: 43px;
+    /*background-color: pink;*/
+    margin: 0 auto;
+}
+#header #header_bottom ul li a{
+    font-size: 20px;
+    color:#956400 ;
+}
+#header #header_bottom ul .left{
+    width: 150px;
+    height: 43px;
+    float: left;
+
+}
+#header #header_bottom ul .right{
+    width: 150px;
+    height: 43px;
+    float: right;
+}
+
+.fenkai{
+    width: 100%;
+    height: 17px;
+    background: url("Pictures/img/background/english_font.png") repeat-x;
+}
+
+#center{
+    width: 80%;
+    height: 1940px;
+    margin: 0 auto;
+    background-color:white;
+}
+
+#center #display_pic{
+    width: 100%;
+    height: 500px;
+    /*background-color: yellow;*/
+}
+#center #display{
+    width: 65%;
+    height: 500px;
+    background-color: #330303;
+    float: left;
+
+}
+#center #picture{
+    width: 30%;
+    height: 500px;
+    background: url("Pictures/img/background/宣传牌.jpg");
+    background-size: cover;
+    float: right;
+
+}
+#center  #display .ig{
+    position: absolute;
+    width: 55%;
+    height: 500px;
+}
+#center  #display .ig img{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+
+}
+#center #display .btn{
+    position: absolute;
+    height: 60px;
+    width: 40px;
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height:60px;
+    font-size:40px;
+    color: white;
+    cursor: pointer;  /*注意这里是将鼠标移上去之后，鼠标变成小手*/
+    display: none;
+    top: 500px;
+}
+#center #display .btn1{
+
+    left: 160px;
+    /*right: 0;  注意是绝对定位，所以这种方法不可行*/
+}
+#center #display .btn2{
+    right: 500px;
+    /*right: 0;  注意是绝对定位，所以这种方法不可行*/
+}
+#center #display ul{
+    list-style: none;
+    position: absolute;
+    top: 720px;
+    left: 380px;
+}
+#center #display .tab{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.3);
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    color: white;
+    margin-right: 5px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#center #display .bg{
+    background-color: #4889ff;
+}
+
+#center #shangpin{
+    width: 100%;
+    height: 1440px;
+    background-color:#330303;
+    border: 5px solid #000;
+}
+
+#center #shangpin  #shangpin_logo{
+    background: url("Pictures/img/background/商品展示.jpg") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30px;
+    /*background-color: #330303;*/
+}
+
+#center #shangpin #show1{
+    width: 100%;
+    height: 1400px;
+    /*background-color: blue;*/
+}
+
+#show1 #accordion{
+    width: 100%;
+    height: 1400px;
+    list-style: none;
+    /*background-color: red;*/
+}
+#show1 #accordion>li .submenu{
+    width: 100%;
+    height: 300px;
+    /*display: none;*/
+    /*background: #444359;*/
+    /*font-size: 14px;*/
+    list-style: none;
+}
+#show1 #accordion>li .submenu li{
+    width: 22.5%;
+    height: 300px;
+    /*background-color: deeppink;*/
+    float: left;
+    margin-left: 2%;
+    margin-top:10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#show1 .accordion .link {
+    cursor: pointer;
+    display: block;
+    padding: 20px 10px 0px 42px;
+    color:#956400;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+}
+#show1 .accordion .link a{
+    display: block;
+    margin-right: 20px;
+    float: right;
+    font-size: 14px;
+    color:#956400;
+    text-decoration: none;
+
+}
+#show1 ul li .paimai_picture{
+    /*width: 238px;*/
+    height: 250px;
+    /*background-color: orange;*/
+
+}
+#show1 ul li .paimai_picture img{
+    /*width: 238px;*/
+    height: 250px;
+}
+#show1 ul li .paimai_desc{
+    width: 238px;
+    height: 148px;
+    /*background-color: salmon;*/
+}
+
+#show1 ul li .paimai_desc> span{
+    display: block;
+    margin-top: 5px;
+    /*background-color: pink;*/
+    color: #FFCA47;
+    font-weight: bold;
+    /*margin: 0 auto;*/
+    text-align: center;
+}
+#show1 ul li .paimai_desc>  a{
+    margin-left: 10px;
+    text-decoration: none;
+    color:  #FF1D11;
+}
+
+#footer{
+    width: 100%;
+    height: 500px;
+    background-color: #330303;
+}
+#footer #footer_top{
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background: url("Pictures/img/background/huozuo.jpg") no-repeat center;
+    background-size: contain;
+    
+}
+#footer #footer_bottom p{
+    text-align: center;
+    color:#956400;
+    font-weight:bold;
+}

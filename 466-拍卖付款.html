@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拍卖竞价</title>
+    <link rel="stylesheet" href="css/458-common.css">
+    <link rel="stylesheet" href="css/458-cart.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/462-竞价判断.js" >
+    	
+    </script>
+    
+</head>
+<body>
+
+<div class="container header">
+    <div class="span5">
+        <div class="logo">
+            <a href="">
+                <img src="Pictures/image/00juqi.png" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div class="span9">
+        <div class="headerAd">
+            <img src="Pictures/image/00header.jpg" width="320" height="50" alt="正品保障" title="正品保障"/>
+        </div>
+    </div>
+    <div class="span10 last">
+        <div class="topNav clearfix">
+            <ul>
+                <li id="headerLogin" class="headerLogin" style="display: list-item;">
+                    <a href="455-买家登录成功.html">返回个人主页</a>|
+                </li>
+                <li id="headerRegister" class="headerRegister" style="display: list-item;">
+                    <a href="450-聚奇古玩定制首页.html">退出登录</a>|
+                </li>
+                <li id="headerUsername" class="headerUsername"></li>
+                <li id="headerLogout" class="headerLogout">
+                    <a href="">[退出]</a>|
+                </li>
+                <li>
+                    <a>关于我们</a>
+
+                </li>
+            </ul>
+        </div>
+        <!--<div class="cart">-->
+            <!--<a href="./cart.jsp">购物车</a>-->
+        <!--</div>-->
+        <div class="phone">
+            客服热线:
+            <strong>17773228771</strong>
+        </div>
+    </div>
+    <!-- 菜单栏 -->
+    <div class="span24">
+        <ul class="mainNav">
+            <li>
+                <a href="455-买家登录成功.html">首页</a>
+                |
+            </li>
+            <li>
+                <a href="453-商品拍卖1.html">拍品主页</a>
+                |
+            </li>
+            <li>
+                <a href="457-商品展示.html">商品主页</a>
+                |
+            </li>
+            <li>
+                <a href="">定制主页</a>
+                |
+            </li>
+
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="container cart">
+
+    <div class="span24">
+
+        <div class="step step1">
+            <ul>
+
+                <li  class="current"></li>
+                <li  style="width: 500px;color: red;">您正在竞拍付款，请谨慎操作，付款后不可退款！！！</li>
+            </ul>
+        </div>
+
+
+        <table>
+            <tbody>
+            <tr>
+                <th>图片</th>
+                <th width='150px'>商品名称</th>
+                <th width='150px'>起拍价</th>
+                <th width='150px'>当前最高竞价</th>
+                <th width='150px'>您的竞价</th>
+                <th width='150px'>操作</th>
+            </tr>
+
+            <tr>
+                <td width="60">
+                    <input type="hidden" name="id" value="22"/>
+                    <img src="Pictures/image/00zishahu.png"/>
+                </td>
+                <td>
+                    <a target="_blank"><s:property value="product.pname"/></a>
+                </td>
+                <td>
+                   <span> ￥ <span>1298.00</span></span>
+                    
+                </td>
+                <td class="quantity" width="60">
+                    <span> ￥ <span id="zuigao">10298.00</span></span>
+                </td>
+                <td width="140">
+                    <input id="chujia" style="border:0px;background:none;" placeholder="请输入您的竞价..." type="text"/>
+                </td>
+                <td>
+                	<a href="#" ./cart_removeCart.action?pid=1" class="delete">重置</a>
+                    <a href="#" ./cart_removeCart.action?pid=1" class="delete">删除</a>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <dl id="giftItems" class="hidden" style="display: none;">
+        </dl>
+        <div class="total">
+            <em id="promotion"></em>
+            您的竞价: 
+            <strong>￥</strong>
+            <strong id="effectivePrice"></strong>
+            <strong>.00元</strong>
+        </div>
+        <form id="orderForm" action="./order_payOrder.action" method="post">
+            <div class="span24">
+                <hr />
+                <p>
+                    选择银行：<br/>
+                    <input type="radio" name="pd_FrpId" value="ICBC-NET-B2C"/>工商银行
+                    <img src="Pictures/bank_img/icbc.bmp" align="middle"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="pd_FrpId" value="BOC-NET-B2C"/>中国银行
+                    <img src="Pictures/bank_img/bc.bmp" align="middle"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="pd_FrpId" value="ABC-NET-B2C"/>农业银行
+                    <img src="Pictures/bank_img/bc.bmp" align="middle"/>
+                    <br/>
+                    <input type="radio" name="pd_FrpId" value="BOCO-NET-B2C"/>交通银行
+                    <img src="Pictures/bank_img/bcc.bmp" align="middle"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="pd_FrpId" value="PINGANBANK-NET"/>平安银行
+                    <img src="Pictures/bank_img/pingan.bmp" align="middle"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="pd_FrpId" value="CCB-NET-B2C"/>建设银行
+                    <img src="Pictures/bank_img/ccb.bmp" align="middle"/>
+                    <br/>
+                    <input type="radio" name="pd_FrpId" value="CEB-NET-B2C"/>光大银行
+                    <img src="Pictures/bank_img/guangda.bmp" align="middle"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="pd_FrpId" value="CMBCHINA-NET-B2C"/>招商银行
+                    <img src="Pictures/bank_img/cmb.bmp" align="middle"/>
+                </p>
+                <hr />
+                <p style="text-align:right">
+                    <a id="queren" href="JavaScript:;">
+                        <img src="Pictures/image/finalbutton.gif" width="204" height="51" border="0" />
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="container footer">
+    <div class="span24">
+        <div class="footerAd">
+            <img src="Pictures/image/00footer.jpg" alt="我们的优势" title="我们的优势" height="52" width="950">
+        </div>
+    </div>
+    <div class="span24">
+        <ul class="bottomNav">
+            <li>
+                <a href="#">关于我们</a>
+                |
+            </li>
+            <li>
+                <a href="#">联系我们</a>
+                |
+            </li>
+            <li>
+                <a>友情链接</a>
+                |
+            </li>
+            <li>
+                <a target="_blank">支付方式</a>
+                |
+            </li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

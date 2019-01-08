@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看订单</title>
+    <link rel="stylesheet" href="css/458-common.css">
+    <link rel="stylesheet" href="css/458-cart.css">
+</head>
+<body>
+
+<div class="container header">
+    <div class="span5">
+        <div class="logo">
+            <a href="">
+                <img src="Pictures/image/00juqi.png" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div class="span9">
+        <div class="headerAd">
+            <img src="Pictures/image/00header.jpg" width="320" height="50" alt="正品保障" title="正品保障"/>
+        </div>
+    </div>
+    <div class="span10 last">
+        <div class="topNav clearfix">
+            <ul>
+                <li id="headerLogin" class="headerLogin" style="display: list-item;">
+                    <a href="455-买家登录成功.html">返回个人主页</a>|
+                </li>
+                <li id="headerRegister" class="headerRegister" style="display: list-item;">
+                    <a href="450-聚奇古玩定制首页.html">退出登录</a>|
+                </li>
+                <li id="headerUsername" class="headerUsername"></li>
+                <li id="headerLogout" class="headerLogout">
+                    <a href="">[退出]</a>|
+                </li>
+                <li>
+                    <a>关于我们</a>
+
+                </li>
+            </ul>
+        </div>
+        <div class="cart">
+            <a href="./cart.jsp">购物车</a>
+        </div>
+        <div class="phone">
+            客服热线:
+            <strong>17773228771</strong>
+        </div>
+    </div>
+    <!-- 菜单栏 -->
+    <div class="span24">
+
+        <ul class="mainNav">
+            <li>
+                <a href="455-买家登录成功.html">首页</a>
+                |
+            </li>
+            <li>
+                <a href="453-商品拍卖1.html">拍品主页</a>
+                |
+            </li>
+            <li>
+                <a href="457-商品展示.html">商品主页</a>
+                |
+            </li>
+            <li>
+                <a href="">定制主页</a>
+                |
+            </li>
+
+
+        </ul>
+    </div>
+
+</div>
+
+<div class="container cart">
+
+    <div class="span24">
+
+        <div class="step step1">
+            <ul>
+
+                <li  class="current"></li>
+                <li  >历史订单</li>
+            </ul>
+        </div>
+
+
+        <table>
+            <tbody>
+            <tr>
+                <th>图片</th>
+                <th>订单号</th>
+                <th>创建时间</th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+
+            <tr>
+                <td width="60">
+                    <input type="hidden" name="id" value="22"/>
+                    <img src="Pictures/image/00zishahu.png"/>
+                </td>
+                <td>
+                    20180405_a21
+                </td>
+                <td>2018/4/5</td>
+                <td>
+                    西施壶
+                </td>
+                <td>
+                    1298.00
+                </td>
+                <td class="quantity" width="60">
+                    <input type="text" name="count" value="1" maxlength="4" onpaste="return false;"/>
+                    <div>
+                        <span class="increase">&nbsp;</span>
+                        <span class="decrease">&nbsp;</span>
+                    </div>
+                </td>
+                <td width="140">
+                    <span class="subtotal">￥1298.00</span>
+                </td>
+                <td>
+                    <a href="./cart_removeCart.action?pid=1" class="delete">删除</a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="60">
+                    <input type="hidden" name="id" value="22"/>
+                    <img src="Pictures/image/00zishahu.png"/>
+                </td>
+                <td>
+                    20180405_a21
+                </td>
+                <td>2018/4/5</td>
+                <td>
+                    西施壶
+                </td>
+                <td>
+                    1298.00
+                </td>
+                <td class="quantity" width="60">
+                    <input type="text" name="count" value="1" maxlength="4" onpaste="return false;"/>
+                    <div>
+                        <span class="increase">&nbsp;</span>
+                        <span class="decrease">&nbsp;</span>
+                    </div>
+                </td>
+                <td width="140">
+                    <span class="subtotal">￥1298.00</span>
+                </td>
+                <td>
+                    <a href="./cart_removeCart.action?pid=1" class="delete">删除</a>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <dl id="giftItems" class="hidden" style="display: none;">
+        </dl>
+
+        <div class="container footer">
+            <div class="span24">
+                <div class="footerAd">
+                    <img src="Pictures/image/00footer.jpg" alt="我们的优势" title="我们的优势" height="52" width="950">
+                </div>
+            </div>
+            <div class="span24">
+                <ul class="bottomNav">
+                    <li>
+                        <a href="#">关于我们</a>
+                        |
+                    </li>
+                    <li>
+                        <a href="#">联系我们</a>
+                        |
+                    </li>
+                    <li>
+                        <a>友情链接</a>
+                        |
+                    </li>
+                    <li>
+                        <a target="_blank">支付方式</a>
+                        |
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+</body>
+</html>

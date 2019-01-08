@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="bootstrap基础/css/bootstrap.css">
+    <link rel="stylesheet" href="css/451-注册.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap基础/js/bootstrap.js"></script>
+    <script src="js/451-注册.js"></script>
+    <script src="js/451-买家注册验证.js"></script>
+    <script src="js/451-卖家注册验证.js"></script>
+</head>
+<body>
+<div id="header">
+    <div id="header_center">
+        <div id="search">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入查找的古玩名称...">
+                        <span class="input-group-btn">
+                                    <button class="btn" type="button">搜索</button>
+                             </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div id="hot">
+                <span>当前热门搜索：</span>
+                <a href="">字画</a>
+                <a href="">折扇</a>
+                <a href="">玉佩</a>
+                <a href="">陶瓷</a>
+                <a href="">怀表</a>
+                <a href="">古钱</a>
+                <a href="">宝石</a>
+                <a href="">兵器</a>
+                <a href="">甲骨</a>
+                <a href="">古石</a>
+                <a href="">印章</a>
+                <a href="">步摇</a>
+                <a href="">邮票</a>
+                <a href="">古砚</a>
+                <a href="">折伞</a>
+                <a href="">古碗</a>
+                <a href="">扳指</a>
+                <a href="">发簪</a>
+                <a href="">手镯</a>
+                <a href="">银器</a>
+                <a href="">乐器</a>
+            </div>
+        </div>
+    </div>
+    <div id="header_bottom">
+        <ul class="nav ">
+            <li role="presentation" class="active left"><a href="450-聚奇古玩定制首页.html">首页</a></li>
+            <li role="presentation" class="left"><a href="453-商品拍卖1.html">淘立拍</a></li>
+            <li role="presentation" class="left"><a href="457-商品展示.html">热销商品</a></li>
+            <li role="presentation" class="right"><a href="#">故事集锦</a></li>
+            <li role="presentation" class="right"><a href="#">玩物励志</a></li>
+            <li role="presentation" class="right"><a href="#">专属定制</a></li>
+        </ul>
+    </div>
+</div>
+<div class="fenkai"></div>
+<div id="reg_body">
+        <p>用户注册</p>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inlineRadio1" class="col-sm-2 control-label">身份选择</label>
+                <div class="btn-group col-sm-6 choice">
+                    <label id="buyer" class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 买家注册
+                    </label>
+                    <label id="seller" class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 卖家注册
+                    </label>
+                </div>
+                <span class="tishi">*必选</span>
+            </div>
+            <div id="buyer_reg">
+                <div class="form-group">
+                    <label for="username" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-6">
+                        <input id="username" class="form-control"  placeholder="请输入至少8位用户名">                    </div>
+                    <span class="tishi">*建议使用邮箱、电话号码等</span>
+                </div>
+                <div class="form-group">
+                    <label for="Password" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-6">
+                        <input id="Password" type="password" class="form-control"  placeholder="请输入">
+                    </div>
+                    <span id="pass_tishi" class="tishi">*长度至少为8位，必须包含数字、字母、符号中的至少两种</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="Password_again" class="col-sm-2 control-label">确认密码</label>
+                    <div class="col-sm-6">
+                        <input id="Password_again" type="password" class="form-control" placeholder="请再次确认密码">
+                    </div>
+                    <span id="pass_yanzheng" class="tishi"></span>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">电子邮箱</label>
+                    <div class="col-sm-6">
+                        <input id="inputEmail"  type="email" class="form-control" placeholder="请输入邮箱">
+                    </div>
+                    <span id="youxiang_yanzheng" class="tishi"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Tel" class="col-sm-2 control-label">联系电话</label>
+                    <div class="col-sm-6">
+                        <input id="Tel" type="text" class="form-control tel"  placeholder="请输入联系电话">
+                    </div>
+                    <span id="tel_tishi" class="tishi "></span>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input id="yuedu" type="checkbox"> 我已阅读“网站须知”条款
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">同意并注册</button>
+                        <button type="submit" class="btn btn-success">立即登录</button>
+                    </div>
+                </div>
+            </div>
+            <div id="seller_reg">
+                <div class="form-group">
+                    <label for="username1" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="username1" placeholder="请输入至少8位用户名">
+                    </div>
+                    <span class="tishi">*建议使用邮箱、电话号码等</span>
+                </div>
+                <div class="form-group">
+                    <label for="Password1" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-6">
+                        <input id="Password1" type="password" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <span id="pass_tishi1" class="tishi">*长度至少为8位，必须包含数字、字母、符号中的至少两种</span>
+                </div>
+                <div class="form-group">
+                    <label for="Password_again1" class="col-sm-2 control-label">确认密码</label>
+                    <div class="col-sm-6">
+                        <input id="Password_again1" type="password" class="form-control pass_again" placeholder="请再次确认密码">
+                    </div>
+                    <span id="pass_yanzheng1" class="tishi"></span>
+                </div>
+                <div class="form-group">
+                    <label for="youxiang1" class="col-sm-2 control-label">电子邮箱</label>
+                    <div class="col-sm-6">
+                        <input id="youxiang1" type="email" class="form-control youxiang" id="inputPassword3" placeholder="请输入常用邮箱">
+                    </div>
+                    <span  id="youxiang_yanzheng1" class="tishi "></span>
+                </div>
+                <div class="form-group">
+                    <label for="Tel1" class="col-sm-2 control-label">联系电话</label>
+                    <div class="col-sm-6">
+                        <input id="Tel1" type="text" class="form-control tel"  placeholder="请输入联系电话">
+                    </div>
+                    <span id="tel_tishi1" class="tishi"></span>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">真实姓名</label>
+                    <div class="col-sm-6">
+                        <input id="name" type="text" class="form-control"  placeholder="请输入真实姓名">
+                    </div>
+                    <span id="name_tishi" class="tishi"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputAmount" class="col-sm-2 control-label">证件号码</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入证件号码">
+                    </div>
+                    <span class="tishi" id="iden_tishi"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="shop_name" class="col-sm-2 control-label">店铺名称</label>
+                    <div class="col-sm-6">
+                        <input id="shop_name" type="text" class="form-control"  placeholder="请输入店铺名称（不可修改）">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inlineCheckbox1" class="col-sm-2 control-label">主营：</label>
+                    <div class="btn-group col-sm-6 ">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 字画
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 玉器
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 首饰
+                        </label>
+
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox4" value="option1"> 古玩
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox5" value="option2"> 乐器
+                        </label>
+                        <br>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox6" value="option3"> 饰品
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox7" value="option3"> 摆设
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox8" value="option3"> 定制
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox9" value="option3"> 炊具
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox10" value="option3"> 其他
+                        </label>
+
+                    </div>
+                    <span class="tishi">*必选</span>
+                </div>
+                <div class="form-group">
+                    <label for="huojiang" class="col-sm-2 control-label">获奖经历</label>
+                    <div class="btn-group col-sm-6 ">
+                        <textarea id="huojiang" type="text" class="form-control" rows="3" placeholder="请简要叙述获奖经历..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputFile1" class="col-sm-2 control-label">资料上传</label>
+                    <div class="btn-group col-sm-6 ">
+
+                            <label for="exampleInputFile1">上传相关获奖证书文件</label>
+                            <input type="file" id="exampleInputFile1">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 我已阅读“卖家须知”条款
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">验证并注册</button>
+                        <button type="submit" class="btn btn-success">立即登录</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+</div>
+<div id="footer"></div>
+
+</body>
+</html>

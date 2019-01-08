@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    width: 100%;
+    height: 238px;
+    /*background-color: red;*/
+    background: url("Pictures/img/background/bg_header.png") no-repeat center -30px;
+}
+
+#header #header_center{
+    width: 80%;
+    height: 118px;
+    /*background-color: dodgerblue;*/
+    margin: 0px auto;
+}
+#header_center #search{
+    width: 40%;
+    height: 90px;
+    /*background-color: deeppink;*/
+    float: right;
+    margin-top: 28px;
+    /*padding-top: 20px;*/
+    /*padding-right: 40px;*/
+    /*padding-left: 40px;*/
+}
+#header_center #search .btn{
+    background-color: #956400;
+}
+#header_center #search #hot a{
+    text-decoration: none;
+    color:#956400 ;
+}
+#header_center #search #hot span{
+    font-weight: bold;
+    color:red ;
+}
+#header #header_bottom{
+    width: 80%;
+    height: 43px;
+    /*background-color: pink;*/
+    margin: 0 auto;
+}
+#header #header_bottom ul li a{
+    font-size: 20px;
+    color:#956400 ;
+}
+#header #header_bottom ul .left{
+    width: 150px;
+    height: 43px;
+    float: left;
+
+}
+#header #header_bottom ul .right{
+    width: 150px;
+    height: 43px;
+    float: right;
+}
+
+.fenkai{
+    width: 100%;
+    height: 17px;
+    background: url("Pictures/img/background/english_font.png") repeat-x;
+}
+
+#login_body{
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+    background: url("Pictures/img/background/登录背景.jpg") ;
+    background-size: 120%;
+    /*background-color: #d8d8d8;*/
+}
+#login_body #login_body_right{
+    width: 400px;
+    height: 500px;
+    /*background-color: red;*/
+    margin-right:12%;
+    margin-top: 50px;
+    float: right;
+    /*padding: 30px;*/
+}
+#login_body_right #login_body_right_top{
+    width: 400px;
+    height: 300px;
+    /*background-color: #ccccff;*/
+    padding:30px;
+    border: 1px solid #ccc;
+    border-radius: 25px 25px 0 0 ;
+    box-shadow: darkgrey 0px 0px 30px 0px ;//边框阴影
+}
+
+#login_body_right #login_body_right_top p{
+    text-align: center;
+    font-size: 30px;
+    color: gold;
+}
+#login_body_right #login_body_right_top .login_btn{
+    width: 100px;
+    margin-left:30px;
+    margin-right: 20px;
+}
+#login_body_right #login_body_right_top #forget_pass{
+    display: block;
+    float: right;
+    color: #141414;
+}
+#login_body_right #login_body_right_bottom{
+    width: 400px;
+    height: 100px;
+    /*background-color: yellow;*/
+    border: 2px solid #ccc;
+    border-radius: 0 0 25px 25px;
+    box-shadow: darkgrey 0px 0px 30px ;//边框阴影
+}
+
+#login_body_right #login_body_right_bottom span{
+    display: block;
+    padding-top: 10px;
+    padding-left: 30px;
+    color: #141414;
+
+}
+#login_body_right #login_body_right_bottom #other_login{
+    width: 400px;
+    height: 60px;
+    /*background-color: orangered;*/
+    background: url("Pictures/img/background/login.PNG") no-repeat 100px 10px;
+    background-size: 50%;
+    padding-left: 100px;
+}
+#login_body_right #login_body_right_bottom #other_login div{
+    border-radius: 50%;
+    /*background-color: palegreen;*/
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    /*background-color: orange;*/
+    background: url("Pictures/img/background/9.jpg") no-repeat center;
+    /*background-size: cover;*/
+}
+
+
+

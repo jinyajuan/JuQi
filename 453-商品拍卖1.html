@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拍卖现场</title>
+    <link rel="stylesheet" href="bootstrap基础/css/bootstrap.css">
+    <link rel="stylesheet" href="css/453-商品拍卖1.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap基础/js/bootstrap.min.js"></script>
+    <script src="js/453-商品拍卖1.js"></script>
+    <script src="js/453-倒计时.js"></script>
+
+    <!--这是实现聊天的js代码，没看懂 -->
+    <script src="static/js/xscriptroll.js"></script>
+    <script src="static/js/xscriptmenudown.js"></script>
+    <script src="static/js/jquery.1.8.3.js" type="text/javascript"></script>
+    <script src="static/js/zeroclipboard.js" type="text/javascript"></script>
+    <script src="static/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+    <script src="static/js/common.js" type="text/javascript"></script>
+    <script src="static/js/public.js" type="text/javascript"></script>
+    <script src="static/js/popup.js" type="text/javascript"></script>
+    <script src="static/js/jquery.validate.js"></script>
+    <script src="static/js/baison.js"></script>
+    <script type="text/javascript" src="static/js/dd_belatedpng_0.0.8a-min.js"></script>
+    <script language="javascript" type="text/javascript">
+        NTKF_PARAM = {
+            siteid:"kf_9707",		//企业ID，必填，取值参见文档开始表
+            settingid:"kf_9707_1414986472014",		//缺省客服配置ID，必填，取值参见文档开始表
+            uid:"",		//用户ID,未登录可以为空
+            uname:"",		//用户名，未登录可以为空
+            isvip:         "",          //是否为vip用户
+            userlevel:	""		//网站自定义会员级别
+        }
+    </script>
+    <script type="text/javascript" src="static/js/ntkfstat.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        /* 控制左右按钮显示 */
+        jQuery(".fullSlide").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.3);
+            var left=$(".all-classify-btn").offset().left+00;
+            jQuery(this).find(".prev").css({"left":left});
+            var left=$(".all-classify-btn").offset().left+170;
+            jQuery(this).find(".next").css({"left":left});
+        },function(){ jQuery(this).find(".prev,.next").fadeOut();
+
+        });
+
+        /* 调用SuperSlide */
+        jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
+            startFun:function(i){
+                var curLi = jQuery(".fullSlide .bd li").eq(i); /* 当前大图的li */
+                if( !!curLi.attr("_src") ){
+                    curLi.css("background-image",curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
+                }
+            }
+        });
+    </script>
+
+</head>
+<body>
+<div id="header">
+    <div id="header_center">
+        <div id="search">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入查找的古玩名称...">
+                        <span class="input-group-btn">
+                                    <button class="btn" type="button">搜索</button>
+                             </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div id="hot">
+                <span>当前热门搜索：</span>
+                <a href="">字画</a>
+                <a href="">折扇</a>
+                <a href="">玉佩</a>
+                <a href="">陶瓷</a>
+                <a href="">怀表</a>
+                <a href="">古钱</a>
+                <a href="">宝石</a>
+                <a href="">兵器</a>
+                <a href="">甲骨</a>
+                <a href="">古石</a>
+                <a href="">印章</a>
+                <a href="">步摇</a>
+                <a href="">邮票</a>
+                <a href="">古砚</a>
+                <a href="">折伞</a>
+                <a href="">古碗</a>
+                <a href="">扳指</a>
+                <a href="">发簪</a>
+                <a href="">手镯</a>
+                <a href="">银器</a>
+                <a href="">乐器</a>
+            </div>
+        </div>
+    </div>
+    <div id="header_bottom">
+        <ul class="nav ">
+            <li role="presentation" class="active left"><a href="450-聚奇古玩定制首页.html">首页</a></li>
+            <li role="presentation" class="left"><a href="453-商品拍卖1.html">淘立拍</a></li>
+            <li role="presentation" class="left"><a href="457-商品展示.html">热销商品</a></li>
+            <li role="presentation" class="right"><a href="#">故事集锦</a></li>
+            <li role="presentation" class="right"><a href="#">玩物励志</a></li>
+            <li role="presentation" class="right"><a href="#">专属定制</a></li>
+        </ul>
+    </div>
+</div>
+<div class="fenkai"></div>
+
+<div id="paimai">
+    <p id="paimai_huichang">拍品展示——主会场</p>
+    <ul id="accordion" class="accordion">
+        <li>
+            <div class="link"><i class="fa fa-paint-brush"></i>玉器<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li class="q">
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/1211199141.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span><a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/948144593.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/1116144765.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/1136500329.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-paint-brush"></i>首饰<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-paint-brush"></i>字画<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-paint-brush"></i>陶瓷<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="link"><i class="fa fa-paint-brush"></i>其他<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="paimai_picture">
+                        <img src="Pictures/img/collection/90121319709.jpg" alt="">
+                    </div>
+                    <div class="paimai_desc">
+                        <a href="">玉雕沁色马上翻身坠</a>
+                        <span class="pri_price">当前最高竞价：￥12300.00</span>
+                        <span>起拍价：￥6500.00</span>
+                        <span>参与竞拍人数：23人</span>
+                        <span>竞拍倒计时： <span class="time">2018/5/20 00:00:00</span></span>
+                        <span>
+                    <a href="">拍品详情</a>
+                    <a href="">我要竞拍 <span class="glyphicon glyphicon-heart"></span> </a>                        </span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="xiangqing">
+    <div id="xiangqing_top">
+        <div id="xiangqing_pic">
+            <img class="imgs" src="" alt="">
+        </div>
+        <div id="xiangqing_desc">
+            <p id="name">和田玉</p>
+            <p>当前竞价：￥38000.00</p>
+            <p>起拍价：4000.00</p>
+            <p>参与竞拍人数：30人</p>
+            <p>竞拍倒计时：</p>
+            <p>关注人气：50人</p>
+            <button type="button" class="btn btn-danger"><a href="466-拍卖付款.html">立即拍下</a> </button>
+            <button type="button" class="btn btn-danger">收藏 </button>
+        </div>
+        <div id="xiangqing_shop">
+            <p id="shop_name">浪淘沙玉器专卖店</p>
+            <p>掌柜：小花</p>
+            <p>信誉：
+                <span class="glyphicon glyphicon-star star"></span>
+                <span class="glyphicon glyphicon-star star"></span>
+            </p>
+            <p>成交量：25</p>
+            <p>店铺地址：湖南湘潭</p>
+            <span onclick="NTKF.im_openInPageChat()" class="pop_in" > <a href=""><img src="Pictures/img/background/qq.png" alt=""> </a>联系掌柜 </span>
+            <span class="pop_in"> <a href="460-店铺信息.html"> <img src="Pictures/img/background/shop-line.png" alt=""> 进店逛逛</a> </span>
+            <span class="pop_in"> <a href=""> <img src="Pictures/img/background/staar.png" alt=""> </a>关注店铺 </span>
+        </div>
+    </div>
+    <div id="xiangqing_bottom">
+        <ul class="nav nav-tabs xiangqing_daohang">
+            <li id="xiangqing_daohang_a" role="presentation" class="active"><a href="#">规格参数</a></li>
+            <li id="xiangqing_daohang_b" role="presentation"><a href="#">产品介绍</a></li>
+            <li id="xiangqing_daohang_c" role="presentation"><a href="#">历史评价</a></li>
+        </ul>
+
+        <div id="ul_a" class="bit">
+            <div class="pic">
+                <img class="imgs" src="">
+            </div>
+            <div class="des">
+                <ul>
+                    <li class="dic"> <span>商品名称：玉雕沁色马上翻身坠</span> </li>
+                    <li class="dic"> <span>商品编号：ECS001983</span> </li>
+                    <li class="dic"> <span>上架时间：2018-04-21</span> </li>
+                    <li class="dic"> <span>商品毛重：0克</span> </li>
+                </ul>
+            </div>
+        </div>
+        <!--产品介绍-->
+        <div id="ul_b" class="bit">
+            <div class="pic">
+                <img  class="imgs" src="">
+            </div>
+            <div class="des">
+                <ul>
+                    <li>朝代：明朝</li>
+                    <li>类别：古玩</li>
+                    <li>历史：发源于新石器时代早期而绵延至今的“玉文化”是中国文化有别于世界其他文明的显著特点。中国人把玉看作是天地精气的结晶，使玉具有了不同寻常的宗教象征意义。取之于自然，琢磨于帝王宫苑的玉制品被看作是显示等级身份地位的象征物，成为维系社会统治秩序所谓“礼制”的重要构成部分。同时，玉在丧葬方面的特殊作用也使玉具有了无比的神秘宗教意义。而由于玉的外表及色泽，人们把玉本身具有的一些自然特性比附于人的道德品质，作为所谓“君子”应具有的德行而加以崇尚歌颂，更是中国人的伟大创造。因此，玉是东方精神生动的物化体现，是中国文化传统精髓的物质根基。
+                        中国玉作为中华民族的先民从各种石头中筛选出来的“石之美者”，具有温润莹泽、缜密坚韧的美感和实用功能。在这个漫长的筛选过程中，“昆山之玉”也就是“和田玉”成为公认的“宝玉”、“真玉”。
+                        中国是爱玉之国、崇玉之邦，玉石来源约有一百余处，中国历史上在用玉制度方面早已体现出真玉、非真玉的界定。帝王是中国古代最高阶级，和田玉在成为真玉的同时，也就成为帝王用玉。此后，经过无数的岁月，和阗玉方才走入民间。
+                        和田玉是中华民族的瑰宝，是中国的“国石”。它象一颗明珠，在中国历史文化中放射出灿烂的光辉，是中华民族道德精神的重要象征之一。</li>
+                </ul>
+            </div>
+        </div>
+        <!--历史评价-->
+        <div id="ul_c" class="bit">
+            <ul>
+                <li>暂无评价</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+<div id="footer"></div>
+
+</body>
+</html>
